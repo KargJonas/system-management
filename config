@@ -1,0 +1,12 @@
+# Launchers
+START_COMPTON=true
+START_DWALL=false
+START_POLYBAR=true
+START_WALLPAPER=true
+
+# Wallpaper
+WALLPAPER_DIR=/home/jonas/Pictures/wallpapers
+
+# Terminal Greeting
+RAINBOW=true
+ADJUST=true
