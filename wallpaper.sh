@@ -1,13 +1,23 @@
 #!/bin/bash
-source ./error.sh
 
-WALLPAPER_DIR=/home/jonas/Pictures/wallpapers
+function wallpaper() {
+  local location=$(dirname $0)
+  source $location/config
+  source $location/util/error.sh
 
-for last_argument; do true; done
-image_location=$WALLPAPER_DIR/$last_argument
+  # Use config by default
+  image_location=$WALLPAPER_DIR/$WALLPAPER
 
-if ( ! test -f "$image_location" ) then
-  error $0 "File does not exist: $image_location" true
-fi
+  # Use file name if provided
+  if [ ! -z $1 ]; then
+    image_location=$WALLPAPER_DIR/$1
+  fi
 
-exec feh --bg-scale $image_location
+  # Validate the input file
+  if (! test -f "$image_location"); then
+    error $0 "File does not exist: $image_location" true
+  fi
+
+  # Set the background
+  exec feh --bg-scale $image_location
+}

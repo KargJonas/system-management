@@ -6,7 +6,11 @@ START_WALLPAPER=true
 
 # Wallpaper
 WALLPAPER_DIR=/home/jonas/Pictures/wallpapers
+WALLPAPER=blue.jpg
 
 # Terminal Greeting
 RAINBOW=true
 ADJUST=true
+
+# Control
+CLEAR_LOGS=true

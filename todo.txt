@@ -1,0 +1,8 @@
+- make everything more uniform
+- put everything into functions
+- think about how to implement pretty errors with the logs
+- add the logic for
+  - backing up configs (git?)
+  - compress/decompress configs
+  - switch configs
+  - auto install environment
